@@ -8,7 +8,7 @@ Landing estática del grupo VIP de **XZ TRADERS**. HTML, CSS y JavaScript sin de
 index.html              Página principal
 assets/css/styles.css   Estilos (tokens de color y tipografía al inicio)
 assets/js/main.js       Enlaces, animaciones y gráfico de ejemplo
-assets/img/             Favicon e imagen para redes (og-cover.jpg)
+assets/img/             Logo (logo.svg), favicons e imagen para redes (og-cover.jpg)
 ```
 
 ## Cambiar los enlaces
