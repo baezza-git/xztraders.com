@@ -8,7 +8,7 @@
  * Si dejas un enlace vacío (''), los botones de redes que lo usan se ocultan.
  */
 const LINKS = {
-  lbank: '', // Enlace de referido de LBANK (ej. https://lbank.com/ref/XXXXX)
+  lbank: 'https://www.lbank.com/ref/62R2M', // Enlace de referido de LBANK
   telegram: '', // Telegram para enviar el UID (ej. https://t.me/usuario)
   instagram: '',
   tiktok: '',
