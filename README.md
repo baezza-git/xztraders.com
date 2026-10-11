@@ -18,7 +18,7 @@ Todos los enlaces están en un solo lugar, al principio de `assets/js/main.js`:
 ```js
 const LINKS = {
   lbank: '',     // enlace de referido de LBANK
-  telegram: '',  // Telegram para enviar el UID
+  telegram: '',  // bot de Telegram para enviar el UID
   instagram: '',
   tiktok: '',
   youtube: '',

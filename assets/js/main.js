@@ -9,7 +9,7 @@
  */
 const LINKS = {
   lbank: 'https://www.lbank.com/ref/62R2M', // Enlace de referido de LBANK
-  telegram: '', // Telegram para enviar el UID (ej. https://t.me/usuario)
+  telegram: 'https://t.me/xztraders_aibot', // Bot de Telegram para enviar el UID y entrar
   instagram: '',
   tiktok: '',
   youtube: '',

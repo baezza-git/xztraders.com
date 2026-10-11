@@ -1615,6 +1615,11 @@ svg {
   line-height: 1.6;
 }
 
+.step strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
 .step .btn {
   margin-top: auto;
 }
