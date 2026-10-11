@@ -31,3 +31,7 @@ npx serve .
 ```
 
 Y abrir la dirección que muestra la consola.
+
+## Publicación
+
+Se publica con GitHub Pages desde la rama `main` (carpeta raíz). El archivo `CNAME` fija el dominio `xztraders.com`.
