@@ -379,7 +379,31 @@ svg {
   pointer-events: none;
 }
 
-/* Haces de luz diagonales */
+/* Haces de luz en 3D (assets/js/beams.js) */
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease);
+}
+
+.has-beams .hero__canvas {
+  opacity: 1;
+}
+
+/* Respaldo en CSS si no hay WebGL */
+.has-beams .beam,
+.has-beams .hero__grain {
+  display: none;
+}
+
+.has-beams .hero__vignette {
+  background: linear-gradient(180deg, transparent 72%, var(--bg) 100%);
+}
+
+/* Haces de luz diagonales (respaldo) */
 .beam {
   position: absolute;
   top: -40%;

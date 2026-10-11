@@ -8,6 +8,7 @@ Landing estática del grupo VIP de **XZ TRADERS**. HTML, CSS y JavaScript sin de
 index.html              Página principal
 assets/css/styles.css   Estilos (tokens de color y tipografía al inicio)
 assets/js/main.js       Enlaces y animaciones
+assets/js/beams.js      Fondo animado del hero (three.js; si no hay WebGL se usa el fondo CSS)
 assets/img/             Logo (logo.svg), favicons e imagen para redes (og-cover.jpg)
 ```
 
