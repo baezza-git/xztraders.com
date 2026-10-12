@@ -4,7 +4,8 @@
    con los mismos parámetros que usa trenchers.ai.
    ========================================================================== */
 
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.min.js';
+// three.js r180 alojado en la propia web (assets/vendor/three), sin CDN externo.
+import * as THREE from '../vendor/three/three.module.min.js';
 
 const CONFIG = {
   beamWidth: 3,
