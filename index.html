@@ -59,11 +59,9 @@
         <symbol id="i-analysis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18" /><path d="m7 15 4-4 3 3 5-6" /></g></symbol>
         <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" /></g></symbol>
         <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /></symbol>
-        <symbol id="i-send" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" /></g></symbol>
-        <symbol id="i-wallet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h14a2 2 0 0 1 2 2v3" /><path d="M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3" /><path d="M21 12h-4a2 2 0 0 0 0 4h4Z" /></g></symbol>
         <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 13.9 8.1 19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z" /><path d="M19 15v4M17 17h4" /></g></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></g></symbol>
         <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14" /></symbol>
-        <symbol id="i-user-plus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M19 8v6M22 11h-6" /></g></symbol>
     </svg>
 
     <!-- NAV -->
@@ -179,37 +177,35 @@
       </section>
 
       <!-- CÓMO ENTRAR -->
-      <section class="section section--line" id="como-entrar">
+      <section class="section section--line section--steps" id="como-entrar">
         <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Cómo entrar</p>
-            <h2 class="h2 h2--xl">Dentro en 3 pasos.</h2>
-            <p class="lead">Tarda unos minutos y es gratis.</p>
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow eyebrow--lines">Cómo entrar</p>
+            <h2 class="h2 h2--xl">Entra al VIP en <span class="accent">3&nbsp;pasos</span>.</h2>
+            <p class="lead">Gratis y en solo unos minutos.</p>
           </div>
 
           <ol class="steps">
             <li class="step reveal">
-              <span class="step__num">01</span>
-              <span class="icon-box"><svg aria-hidden="true"><use href="#i-user-plus" /></svg></span>
+              <span class="step__num" aria-hidden="true">1</span>
               <h3>Regístrate en LBANK</h3>
-              <p>Abre tu cuenta en el exchange LBANK con el enlace oficial de XZ TRADERS: es tu llave al VIP. ¿Ya tienes cuenta? Crea una nueva con este enlace.</p>
-              <a class="btn btn--light btn--sm" href="#como-entrar" data-link="lbank">
-                Abrir LBANK <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+              <p>Usa el <strong>enlace oficial de XZ&nbsp;TRADERS</strong>. ¿Ya tienes cuenta? Crea una nueva.</p>
+              <a class="btn btn--light btn--block" href="#como-entrar" data-link="lbank">
+                Crear cuenta en LBANK <svg aria-hidden="true"><use href="#i-arrow" /></svg>
               </a>
             </li>
             <li class="step reveal">
-              <span class="step__num">02</span>
-              <span class="icon-box"><svg aria-hidden="true"><use href="#i-wallet" /></svg></span>
+              <span class="step__num" aria-hidden="true">2</span>
               <h3>Deposita mínimo 100&nbsp;USDT</h3>
-              <p>Es tu capital para operar y se queda en tu cuenta. No es un pago.</p>
+              <p>Es <strong>tu capital</strong> para operar y se queda en tu cuenta.</p>
+              <p class="step__note"><svg aria-hidden="true"><use href="#i-shield" /></svg>No es un pago</p>
             </li>
             <li class="step reveal">
-              <span class="step__num">03</span>
-              <span class="icon-box"><svg aria-hidden="true"><use href="#i-send" /></svg></span>
-              <h3>Habla con el bot y entra</h3>
-              <p>Habla con <strong>@xztraders_aibot</strong> y mándale tu UID de LBANK, que empieza por LBA. Y ya está.</p>
-              <a class="btn btn--ghost btn--sm" href="#como-entrar" data-link="telegram">
-                Abrir @xztraders_aibot
+              <span class="step__num" aria-hidden="true">3</span>
+              <h3>Habla con el bot</h3>
+              <p>Mándale tu <strong>UID de LBANK</strong> (empieza por LBA) y entras al VIP.</p>
+              <a class="btn btn--light btn--block" href="#como-entrar" data-link="telegram">
+                Abrir @xztraders_aibot <svg aria-hidden="true"><use href="#i-arrow" /></svg>
               </a>
             </li>
           </ol>
