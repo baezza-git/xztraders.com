@@ -20,7 +20,7 @@ Todos los enlaces están en un solo lugar, al principio de `assets/js/main.js`:
 
 ```js
 const LINKS = {
-  lbank: 'https://www.lbank.com/ref/62R2M',    // enlace de referido de LBANK
+  lbank: 'https://www.lbank.com/ref/XZTRADERS',    // enlace de referido de LBANK
   telegram: 'https://t.me/xztraders_aibot',    // bot de Telegram para enviar el UID
 };
 ```
