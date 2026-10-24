@@ -1067,13 +1067,6 @@ svg {
   font-weight: 500;
 }
 
-.vip__chip {
-  width: 9cqw;
-  height: 6.75cqw;
-  margin-top: -1.2cqw;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
-}
-
 .vip__mark {
   color: #f8f4ec;
   font-size: clamp(22px, 5.4cqw, 32px);
