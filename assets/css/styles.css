@@ -1127,6 +1127,41 @@ svg {
   font-size: clamp(10px, 2.2cqw, 13px);
   font-weight: 500;
   letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Ventajas: lista corta separada por puntos dorados */
+.vip__perks dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 0;
+  font-size: clamp(8.5px, 1.9cqw, 11.5px);
+  letter-spacing: 0.02em;
+}
+
+.vip__perks span + span::before {
+  content: "·";
+  margin: 0 0.45em;
+  color: var(--gold);
+}
+
+/* En tarjetas pequeñas (móvil) las ventajas pasan a dos columnas */
+@container (max-width: 460px) {
+  .vip__perks dd {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5em 1.4em;
+  }
+
+  .vip__perks span::before {
+    content: "·";
+    margin-right: 0.45em;
+    color: var(--gold);
+  }
+
+  .vip__perks span + span::before {
+    margin: 0 0.45em 0 0;
+  }
 }
 
 /* --------------------------------------------------------------------------

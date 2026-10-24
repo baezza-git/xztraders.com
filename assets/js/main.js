@@ -195,6 +195,15 @@ function initYear() {
   if (year) year.textContent = new Date().getFullYear();
 }
 
+// Fecha de alta de la tarjeta VIP: el mes y año en que se visita la web (ej. 10 · 2026).
+function initVipDate() {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  document.querySelectorAll('[data-alta]').forEach((el) => {
+    el.textContent = `${month} · ${now.getFullYear()}`;
+  });
+}
+
 applyLinks();
 initNav();
 initReveal();
@@ -202,3 +211,4 @@ initCounters();
 initFeatureGlow();
 initVipCard();
 initYear();
+initVipDate();
