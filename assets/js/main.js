@@ -119,6 +119,77 @@ function initFeatureGlow() {
   });
 }
 
+// Tarjeta VIP del hero: se inclina siguiendo el cursor y, en reposo, se balancea sola.
+function initVipCard() {
+  const scene = document.getElementById('vip-card');
+  if (!scene) return;
+  const zone = scene.closest('.hero') || scene;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clamp = (v) => Math.max(-1, Math.min(1, v));
+
+  // Posición de la "luz" de -1 a 1 en cada eje.
+  const pos = { x: -0.45, y: -0.3 };
+  const target = { ...pos };
+  let pointer = false;
+  let visible = true;
+  let raf = 0;
+  let idle;
+
+  const apply = () => {
+    const { x, y } = pos;
+    const set = (name, value) => scene.style.setProperty(name, value);
+    set('--rx', `${(-y * 10).toFixed(2)}deg`);
+    set('--ry', `${(x * 13).toFixed(2)}deg`);
+    set('--lx', `${(50 + x * 45).toFixed(1)}%`);
+    set('--ly', `${(30 + y * 30).toFixed(1)}%`);
+    set('--edge', (220 + x * 80 + y * 30).toFixed(1));
+    set('--sx', `${(x * 55).toFixed(1)}%`);
+    set('--so', (0.35 + Math.abs(x) * 0.55).toFixed(2));
+    set('--ex', `${(-x * 1.4).toFixed(2)}px`);
+    set('--ey', `${(-y * 1.4).toFixed(2)}px`);
+    set('--tx', `${(x * 4).toFixed(1)}px`);
+    set('--ty', `${(y * 3).toFixed(1)}px`);
+    set('--shx', `${(-x * 18).toFixed(1)}px`);
+    set('--shy', `${(24 - y * 10).toFixed(1)}px`);
+  };
+
+  if (reduce) {
+    apply();
+    return;
+  }
+
+  const tick = (t) => {
+    if (!pointer) {
+      target.x = Math.sin(t / 2600) * 0.6;
+      target.y = Math.cos(t / 3400) * 0.4;
+    }
+    pos.x += (target.x - pos.x) * 0.08;
+    pos.y += (target.y - pos.y) * 0.08;
+    apply();
+    raf = visible ? requestAnimationFrame(tick) : 0;
+  };
+
+  zone.addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    const r = scene.getBoundingClientRect();
+    target.x = clamp((e.clientX - (r.left + r.width / 2)) / (r.width / 2));
+    target.y = clamp((e.clientY - (r.top + r.height / 2)) / (r.height / 2));
+    pointer = true;
+    clearTimeout(idle);
+    idle = setTimeout(() => (pointer = false), 1600);
+  });
+  zone.addEventListener('pointerleave', () => (pointer = false));
+
+  // Solo se anima mientras está en pantalla.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (visible && !raf) raf = requestAnimationFrame(tick);
+    }).observe(scene);
+  }
+  raf = requestAnimationFrame(tick);
+}
+
 function initYear() {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
@@ -129,4 +200,5 @@ initNav();
 initReveal();
 initCounters();
 initFeatureGlow();
+initVipCard();
 initYear();
