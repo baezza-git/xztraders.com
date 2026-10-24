@@ -27,17 +27,17 @@ const LINKS = {
 
 Los botones con `data-link="lbank"` o `data-link="telegram"` usan esos valores y abren en una pestaña nueva.
 
-## Diseño "VIP dorado"
+## Diseño "VIP platino"
 
-Esta versión de la web (rama `diseno-vip-dorado`) cambia solo el aspecto; enlaces, textos de LBANK y lógica son los mismos de `main`.
+Esta versión de la web (rama `diseno-vip-platino`) cambia solo el aspecto; enlaces, textos de LBANK y lógica son los mismos de `main`. Parte de `diseno-vip-dorado`, con identidad propia: negro, platino y el violeta de la marca XZ.
 
-- **Colores:** tokens al principio de `assets/css/styles.css` (`--gold`, `--gold-hi`, `--gold-lo`, `--bg`…).
-- **Tarjeta VIP del hero** (`index.html`, bloque `TARJETA VIP`):
-  - Número de miembro: `Miembro n.º <b>0501</b>`.
+- **Colores:** tokens al principio de `assets/css/styles.css` (`--plat`, `--violet`, `--violet-hi`, `--bg`…).
+- **Tarjeta VIP del hero** (`index.html`, bloque `TARJETA VIP`): tarjeta de titanio con franja holográfica.
+  - Número de miembro: `<span class="vip__digits">0501</span>`.
   - Fecha de alta: se rellena sola con el mes y año de la visita (`initVipDate` en `main.js`). Para una fecha fija, borra `data-alta` del `<dd>` y escribe la fecha.
   - Ventajas: los `<span>` dentro de `.vip__perks`.
+  - Cifras a los lados de la tarjeta: bloques `vip__spec`.
   - Inclinación con el cursor y balanceo: `initVipCard` en `main.js`.
-- **Cifras del hero:** bloque `<dl class="stats">` en `index.html`.
 
 ## Ver en local
 
