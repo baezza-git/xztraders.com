@@ -39,6 +39,14 @@ Esta versión de la web (rama `diseno-vip-platino`) cambia solo el aspecto; enla
   - Cifras a los lados de la tarjeta: bloques `vip__spec`.
   - Inclinación con el cursor y balanceo: `initVipCard` en `main.js`.
 
+## Páginas legales
+
+`aviso-legal.html`, `privacidad.html` y `cookies.html`, enlazadas desde el pie de todas las páginas.
+
+- Los datos del titular (nombre o razón social, NIF/CIF, domicilio, correo y datos registrales) están marcados con `class="pending"` en `aviso-legal.html` y `privacidad.html`. Sustitúyelos por los datos reales y borra la clase. Para encontrarlos: `grep -n pending *.html`.
+- La web no usa cookies ni almacenamiento del navegador, por eso no hay aviso de cookies. Si algún día se añade analítica o publicidad, hay que actualizar `cookies.html` y pedir consentimiento antes de instalarlas.
+- Las páginas legales reutilizan el mismo `<style>` y `<script>` del `<head>` que `index.html`, así que valen las mismas huellas de la política de seguridad.
+
 ## Ver en local
 
 ```bash

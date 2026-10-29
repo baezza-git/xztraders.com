@@ -1464,6 +1464,181 @@ svg {
   user-select: none;
 }
 
+.footer__meta {
+  display: grid;
+  justify-items: end;
+  align-content: start;
+  gap: 10px;
+}
+
+.footer__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  color: var(--text-2);
+  font-size: 12.5px;
+}
+
+.footer__legal-links a {
+  transition: color 0.2s;
+}
+
+.footer__legal-links a:hover {
+  color: var(--text);
+}
+
+/* --------------------------------------------------------------------------
+   Páginas legales (aviso legal, privacidad, cookies)
+   -------------------------------------------------------------------------- */
+
+.legal-page .nav {
+  background: rgba(8, 8, 11, 0.72);
+  border-bottom-color: var(--border);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.doc {
+  padding: calc(var(--nav-h) + 64px) 0 112px;
+  background: radial-gradient(ellipse 70% 320px at 50% 0%, rgba(124, 108, 255, 0.12), transparent 70%), var(--bg);
+}
+
+.doc__inner {
+  max-width: calc(760px + var(--gutter) * 2);
+}
+
+.doc__back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--text-2);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.doc__back:hover {
+  color: var(--violet-hi);
+}
+
+.doc__title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.doc__updated {
+  margin-top: 14px;
+  color: var(--text-3);
+  font-size: 14px;
+}
+
+.doc section {
+  display: grid;
+  gap: 14px;
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.doc h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.doc h3 {
+  margin-top: 8px;
+  color: var(--plat);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.doc p,
+.doc li {
+  max-width: 68ch;
+  color: #c4c4cf;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.doc strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.doc ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.doc li::marker {
+  color: var(--violet);
+}
+
+/* Ficha con los datos del titular */
+.holder {
+  display: grid;
+  margin-top: 4px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.holder > div {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 16px;
+  padding: 14px 20px;
+}
+
+.holder > div + div {
+  border-top: 1px solid var(--border);
+}
+
+.holder dt {
+  color: var(--text-3);
+  font-size: 14px;
+}
+
+.holder dd {
+  min-width: 0;
+  color: var(--text);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+/* Dato que el titular aún tiene que rellenar */
+.pending {
+  padding: 1px 6px;
+  border: 1px dashed rgba(255, 196, 92, 0.6);
+  border-radius: 6px;
+  background: rgba(255, 196, 92, 0.1);
+  color: #ffd38a;
+}
+
+.callout {
+  padding: 16px 20px;
+  border: 1px solid var(--violet-line);
+  border-radius: var(--radius);
+  background: rgba(139, 123, 255, 0.08);
+  color: var(--text) !important;
+}
+
+.callout--ok {
+  border-color: rgba(34, 201, 138, 0.32);
+  background: rgba(34, 201, 138, 0.08);
+}
+
+.doc__see {
+  margin-top: 48px;
+  color: var(--text-2) !important;
+  font-size: 15px !important;
+}
+
 /* --------------------------------------------------------------------------
    CTA fija móvil
    -------------------------------------------------------------------------- */
@@ -1642,6 +1817,19 @@ svg {
 
   .footer__links {
     justify-content: flex-start;
+  }
+
+  .footer__meta {
+    justify-items: start;
+  }
+
+  .doc {
+    padding: calc(var(--nav-h) + 40px) 0 88px;
+  }
+
+  .holder > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   /* Barra fija con CTA */

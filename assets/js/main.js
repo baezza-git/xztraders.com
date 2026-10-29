@@ -31,6 +31,8 @@ function initNav() {
   const update = () => {
     const y = window.scrollY;
     nav.classList.toggle('is-scrolled', y > 24);
+    // Las páginas legales no tienen hero ni barra fija en móvil.
+    if (!hero || !mobileCta) return;
     const pastHero = y > hero.offsetHeight * 0.75;
     mobileCta.classList.toggle('is-visible', pastHero && !finalVisible);
   };
