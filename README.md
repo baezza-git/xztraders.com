@@ -21,15 +21,16 @@ Todos los enlaces están en un solo lugar, al principio de `assets/js/main.js`:
 ```js
 const LINKS = {
   lbank: 'https://www.lbank.com/ref/XZTRADERS',    // enlace de referido de LBANK
+  bingx: 'https://bingxdao.com/partner/baezza/',   // enlace de referido de BingX
   telegram: 'https://t.me/xztraders_aibot',    // bot de Telegram para enviar el UID
 };
 ```
 
-Los botones con `data-link="lbank"` o `data-link="telegram"` usan esos valores y abren en una pestaña nueva.
+Los botones con `data-link="lbank"`, `data-link="bingx"` o `data-link="telegram"` usan esos valores y abren en una pestaña nueva.
 
 ## Diseño "VIP platino"
 
-Esta versión de la web (rama `diseno-vip-platino`) cambia solo el aspecto; enlaces, textos de LBANK y lógica son los mismos de `main`. Parte de `diseno-vip-dorado`, con identidad propia: negro, platino y el violeta de la marca XZ.
+Esta versión de la web (rama `diseno-vip-platino`) cambia solo el aspecto; enlaces, textos de LBANK/BingX y lógica son los mismos de `main`. Parte de `diseno-vip-dorado`, con identidad propia: negro, platino y el violeta de la marca XZ.
 
 - **Colores:** tokens al principio de `assets/css/styles.css` (`--plat`, `--violet`, `--violet-hi`, `--bg`…).
 - **Tarjeta VIP del hero** (`index.html`, bloque `TARJETA VIP`): tarjeta de titanio con franja holográfica.

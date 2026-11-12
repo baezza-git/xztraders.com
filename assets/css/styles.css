@@ -1243,6 +1243,22 @@ svg {
   margin-top: 8px;
 }
 
+/* Paso 1: un botón por exchange */
+.step__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.step p + .step__actions {
+  margin-top: 8px;
+}
+
+.step__actions .btn {
+  margin-top: 0;
+}
+
 .uid {
   padding: 1px 6px;
   border: 1px solid var(--violet-line);

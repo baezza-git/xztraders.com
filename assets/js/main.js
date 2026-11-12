@@ -8,6 +8,7 @@
  */
 const LINKS = {
   lbank: 'https://www.lbank.com/ref/XZTRADERS', // Enlace de referido de LBANK
+  bingx: 'https://bingxdao.com/partner/baezza/', // Enlace de referido de BingX
   telegram: 'https://t.me/xztraders_aibot', // Bot de Telegram para enviar el UID y entrar
 };
 
